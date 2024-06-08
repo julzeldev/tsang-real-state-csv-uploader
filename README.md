@@ -20,7 +20,7 @@ This project reads property data from a CSV file and inserts it into a MongoDB c
 2. **Install dependencies:**
 
    ```bash
-   npm install
+   yarn install
    ```
 
 3. **Configure environment variables:**
