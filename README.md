@@ -14,7 +14,7 @@ This project reads property data from a CSV file and inserts it into a MongoDB c
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone git@github.com:julzeldev/tsang-real-state-csv-uploader.git
    cd csv-uploader
    ```
 
