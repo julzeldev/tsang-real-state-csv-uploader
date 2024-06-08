@@ -7,6 +7,7 @@ This project reads property data from a CSV file and inserts it into a MongoDB c
 - Node.js installed on your machine
 - MongoDB Atlas account (or a local MongoDB instance)
 - `git` installed on your machine
+- `yarn` cli
 
 ## Setup
 
