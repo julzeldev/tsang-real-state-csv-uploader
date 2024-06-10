@@ -8,11 +8,7 @@ const Property = require("./models/Property");
 const uri = process.env.MONGODB_URI;
 
 mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    dbName: "TsangRealStateDB", // Specify your database name here
-  })
+  .connect(uri, { dbName: "TsangRealStateDB" })
   .then(() => {
     console.log("MongoDB connected...");
     readCSVAndInsertData();
@@ -27,16 +23,16 @@ function readCSVAndInsertData() {
   fs.createReadStream("data/properties.csv") // Ensure the path to your CSV file is correct
     .pipe(
       csv({
-        headers: ["property_title", "url_destination", "status"],
+        headers: ["propertyTitle", "destinationURL", "status"],
         skipLines: 1, // Skip the header row if your CSV file has headers
       })
     )
     .on("data", (data) => {
       console.log("Read data:", data); // Debugging: log the data read from CSV
-      if (data.property_title && data.status) {
+      if (data.propertyTitle && data.status) {
         // Ensure mandatory fields are present
-        if (!data.url_destination) {
-          data.url_destination = ""; // Handle empty url_destination
+        if (!data.destinationURL) {
+          data.destinationURL = ""; // Handle empty destinationURL
         }
         results.push(data);
       } else {

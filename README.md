@@ -41,7 +41,7 @@ This project reads property data from a CSV file and inserts it into a MongoDB c
    Ensure your CSV file is located at `data/properties.csv` and has the following structure:
 
    ```csv
-   property_title,url_destination,status
+   propertyTitle,destinationURL,status
    Example Property,https://example.com,yellow
    Another Property,,white
    Wiregrass Stone Oak,https://wiregrassatstoneoak.com,yellow
@@ -50,9 +50,16 @@ This project reads property data from a CSV file and inserts it into a MongoDB c
 ## Usage
 
 1. **Run the application:**
+   Run with node:
 
    ```bash
    node src/app.js
+   ```
+
+   Run with npm:
+
+   ```bash
+   npm start
    ```
 
    The application will read data from the CSV file and insert it into the MongoDB collection.

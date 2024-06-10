@@ -1,4 +1,4 @@
-property_title,url_destination,status
+propertyTitle,destinationURL,status
 0 BWI_OUTPUT,,red
 100 Labor,Website does not show availability; will have to find a solution,yellow
 120 Ninth Street,https://www.apartmentlist.com/tx/san-antonio/120-ninth-street,white
